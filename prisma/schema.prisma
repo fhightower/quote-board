@@ -18,3 +18,9 @@ model Quote {
   text  String
   source  String @default("Unknown")
 }
+
+model State {
+  id    Int     @id @default(autoincrement())
+  nextUpdate  DateTime
+  quoteId Int
+}
